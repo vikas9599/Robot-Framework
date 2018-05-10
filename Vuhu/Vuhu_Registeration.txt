@@ -1,0 +1,7 @@
+*** Settings ***
+Library           SeleniumLibrary
+
+*** Test Cases ***
+Registeration
+    Open Browser    http://www.getfirstcut.com/    chrome
+    Set Browser Implicit Wait    5
