@@ -1,7 +1,15 @@
 *** Settings ***
 Library           SeleniumLibrary
 
+*** Variables ***
+${URL}            http://vuhu.v3mobi.com/    # Website URL
+
 *** Test Cases ***
 Registeration
-    Open Browser    http://www.getfirstcut.com/    chrome
-    Set Browser Implicit Wait    5
+    Open Browser    ${URL}    chrome
+    Click Element    xpath=//html/body[@class='login-wrapper']/nav//li[1]
+    Input Text    xpath=//input[@id='name']    Vikas
+    Input Text    xpath=//input[@id='email']    vikas@gmail.com
+    Input Password    xpath=//input[@id='password']    123456789
+    Click Element    xpath=//html//div[@class='input-field radioDiv']/input[1]
+    Checkbox Should Be Selected    xpath=//label[@for='terms']
