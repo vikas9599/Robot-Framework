@@ -2,14 +2,15 @@
 Library           SeleniumLibrary
 
 *** Variables ***
-${URL}            http://vuhu.v3mobi.com/    # Website URL
 
 *** Test Cases ***
 Registeration
-    Open Browser    ${URL}    chrome
-    Click Element    xpath=//html/body[@class='login-wrapper']/nav//li[1]
-    Input Text    xpath=//input[@id='name']    Vikas
+    Open Browser    http://zingads.in    chrome
+    Maximize Browser Window
+    Click Element    xpath=//ul[@class='nav navbar-nav']//li//a[@href='http://zingads.in/advertiser/login.php']
+    Click Element    xpath=//html/body[@class='login-wrapper']/nav//li[2]
+    Input Text    xpath=//input[@id='prefix']    Vikas
     Input Text    xpath=//input[@id='email']    vikas@gmail.com
     Input Password    xpath=//input[@id='password']    123456789
-    Click Element    xpath=//html//div[@class='input-field radioDiv']/input[1]
-    Checkbox Should Be Selected    xpath=//label[@for='terms']
+    Click Element    xpath=//input[@id='terms']
+    Click Element    xpath=//button[@class='btn waves-effect waves-light']
