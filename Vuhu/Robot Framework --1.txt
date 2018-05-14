@@ -1,0 +1,74 @@
+Today we will learn:
+================
+1. How to setup Robot Framework from scratch
+2. How to uninstall Robot Framework
+3. Helpful Tips
+=================================
+
+
+How to setup Robot Framework
+-------------------------------------------
+
+Step 1 : Pre-check
+       Check if python is already installed
+  python --version
+  pip --version
+       Check if robot framework is already installed
+  robot --version
+
+Step 2 : Install Python 
+      check on cmd : python --version
+          pip --version
+
+Step 3 : Set Python in environment variables
+      C:\Python27;C:\Python27\Scripts;
+      Check: 
+                python --version
+  pip --version
+
+Step 4 : Install robot framework
+       pip install robotframework
+       to uninstall : pip uninstall robotframework
+
+Step 5 : Check on cmd :
+  robot --version
+  pybot --version
+
+Step 6 : Download and install wxPython  
+            https://sourceforge.net/projects/wxpy...
+ check with  : pip freeze  
+ wxpython should be available
+
+Step 7 : Install RIDE
+            pip install robotframework-ride
+            https://github.com/robotframework/RID...
+
+Step 8 : On cmd goto folder where ride.py is (C:\Python27\Scripts)
+            run on cmd : ride.py
+            This should open RIDE
+
+======================================================
+
+How to uninstall Robot Framework
+-------------------------------------------------------
+
+pip uninstall robotframework-ride
+pip uninstall robotframework
+
+======================================================
+
+Helpful TIPS:
+1. Always install wxPython before installing RIDE.  
+    wxPython is a wrapper for getting the GUI of RIDE. 
+    So it is important to install wxPython before you install RIDE
+
+2. Always check your python version and install wxPython for the same version
+     ***32 bit - check your python ver by running command python and install same bit     wxpython
+
+3. pip cache folder is located at - C:\Users\Vikas\AppData\Local\pip\cache
+            If you uninstall a lib and install it again, it will use the zip from cache. 
+            to install fresh 
+                - you can empty contents of cache folder
+                - pip install --no-cache-dir robotframework-ride
+
+4. Versions prior to Robot Framework 3.0 did not have the robot script. Instead they       had pybot, jybot and ipybot scripts that executed tests using Python, Jython and       IronPython, respectively. These scripts are still installed, but the plan is to deprecate     and remove them in the future.
