@@ -1,0 +1,42 @@
+Today we will learn:
+1. How to create a project in RIDE
+2. How to import selenium library
+3. How to add browser drivers
+4. How to create first selenium test
+
+=====================================================
+
+
+Step 1 : Open RIDE 
+             You can open ride from cmd by command ride.py
+             You can also create a desktop shortcut
+
+Step 2 : RIDE - Very Simple UI
+
+Step 3 : Create New Project - Test Suite - TestCase
+
+Step 4 : Download and add SeleniumLibrary
+              Goto - http://robotframework.org/ - LIBRARIES - External - 
+              SeleniumLibrary 
+
+Step 5 : In Project
+             Add Import - Library - SeleniumLibrary 
+             If it shows in Black that means its successfully imported 
+             else not (in red)
+pip install --upgrade robotframework-seleniumlibrary
+
+
+Step 6 : Now in the TC if you start typing Selenium and ctrl+space it 
+              will show you all the keywords of SeleniumLibrary
+             
+             You can use full name - SeleniumLibrary.Open Browser
+             OR
+             only action - OpenBrowser
+
+Step 7 : Add keywords and run
+
+Step 8 : Add browser drivers
+
+Step 9 : Run and see reports
+
+Step 8 : Settings - Tags - Setup | Teardown
