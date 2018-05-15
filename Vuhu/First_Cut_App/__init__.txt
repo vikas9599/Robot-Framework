@@ -1,0 +1,6 @@
+*** Settings ***
+Suite Setup       Test Cases are preparing
+Suite Teardown    Test Cases are finished
+Test Setup        Test Case are set up
+Test Teardown     Test Case are finished
+Force Tags        Set Up

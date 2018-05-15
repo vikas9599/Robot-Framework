@@ -1,0 +1,9 @@
+*** Settings ***
+Library           AppiumLibrary
+
+*** Test Cases ***
+Open App
+    Open Application    http://localhost:4723/wd/hub    platformName=Android    platformVersion=4.2.2    deviceName=192.168.56.101:5555    app=${CURDIR}/demoapp/OrangeDemoApp.apk    appPackage=com.netease.qa.orangedemo
+    ...    appActivity=MainActivity
+    Sleep    5s
+    Close All Applications
