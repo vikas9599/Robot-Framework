@@ -5,6 +5,7 @@ Library           SeleniumLibrary
 
 *** Test Cases ***
 Registeration
+    [Tags]    Registeration    # This is a Registeration Test
     Open Browser    http://zingads.in    chrome
     Maximize Browser Window
     Click Element    xpath=//ul[@class='nav navbar-nav']//li//a[@href='http://zingads.in/advertiser/login.php']
@@ -14,3 +15,11 @@ Registeration
     Input Password    xpath=//input[@id='password']    123456789
     Click Element    xpath=//input[@id='terms']
     Click Element    xpath=//button[@class='btn waves-effect waves-light']
+
+Login
+    [Tags]    Login    # This is a Login Test
+    Open Browser    http://zingads.in    chrome
+
+Open Web
+    Open Browser    http://zingads.in    chrome
+    Click Element    class=
