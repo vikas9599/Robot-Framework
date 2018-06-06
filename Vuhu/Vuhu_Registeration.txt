@@ -1,8 +1,9 @@
 *** Settings ***
 Library           SeleniumLibrary
-Library           AppiumLibrary
 
 *** Variables ***
+${fcweb}          http://www.getfirstcut.com/
+${dev}            http://162.144.82.177/~onlyearn/admin
 
 *** Test Cases ***
 Registeration
@@ -22,5 +23,35 @@ Login
     Open Browser    http://zingads.in    chrome
 
 Open Web
-    Open Browser    http://zingads.in    chrome
-    Click Element    class=
+    [Tags]    Open Web
+    Open Browser    ${fcweb}    chrome
+    Click Element    xpath=//h5[contains(text(),'Bhojpuri Masala')]
+    Click Element    xpath=//div[@class='card card_pad bot-shadow z-depth-5']
+    Sleep    5s
+    Click Element    xpath=//i[@class='waves-effect waves-light material-icons']
+    Sleep    1s
+    Click Element    xpath=//html//ul[@id='slide-out']/li[4]/a[1]
+    Sleep    3s
+    Click Element    xpath=//a[@id='ok_button']
+    Input Text    xpath=//input[@id='name']    Vikas
+    Input Text    xpath=//input[@id='emailId']    Vikas@gmail.com
+    Input Password    xpath=//input[@id='msisdn1']    8505945066
+    Sleep    2s
+    Click Element    xpath=//button[@id='button_read_more']
+    Sleep    8s
+    Click Button    id=button_read_more
+    Capture Page Screenshot
+
+Zing Dev
+    [Tags]    zingdev
+    Open Browser    ${dev}    chrome
+    Maximize Browser Window
+    Input Text    id=exampleInputEmail1    admin
+    Input Password    id=exampleInputPassword1    v3mobi123
+    Sleep    2s
+    Click Button    xpath=//button[@type='submit']
+    Click Element    xpath=//html//ul[@class='nav nav-pills nav-stacked main-menu']/li[5]/a[1]
+    Sleep    3s
+    Click Element    xpath=//html//ul[@class='nav nav-pills nav-stacked main-menu']/li[5]/a[1]
+    Sleep    3s
+    Click Element    xpath=//li[@class='accordion active']//a[@href='#']

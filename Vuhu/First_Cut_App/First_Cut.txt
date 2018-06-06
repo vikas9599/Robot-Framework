@@ -1,9 +1,13 @@
 *** Settings ***
 Library           AppiumLibrary
 
+*** Variables ***
+${app}            C:\Users\Vikash\AppData\Roaming\Skype\My Skype Received Files\app-debug(3).apk
+
 *** Test Cases ***
 Open App
-    Open Application    http://localhost:4723/wd/hub    platformName=Android    platformVersion=4.2.2    deviceName=192.168.56.101:5555    app=${CURDIR}/demoapp/OrangeDemoApp.apk    appPackage=com.netease.qa.orangedemo
-    ...    appActivity=MainActivity
+    [Tags]    open app
+    Install App    app=$(app)    com.v3mobi.first.cut
+    Open Application    http://localhost:8080/wd/hub    platformName=Android    platformVersion=7.0    deviceName=192.168.1.5:5555    app=$(app)    appPackage=com.v3mobi.first.cut
+    ...    appActivity=SplashActivity
     Sleep    5s
-    Close All Applications
